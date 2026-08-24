@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Kamień – nasza wieś</title>
+
+
+    <!-- =========================================
+         ELEGANCKIE CZCIONKI
+    ========================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+
+        /* =========================================
+           PODSTAWOWE USTAWIENIA
+        ========================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            font-family: 'Montserrat', sans-serif;
+
+            color: #26352d;
+
+            /* KREMOWA BAZA */
+
+            background-color: #f5f1e8;
+
+
+            /* =====================================
+               DELIKATNY WZÓR FOLKLORYSTYCZNY
+            ===================================== */
+
+            background-image:
+
+
+                /* CZERWONE KWIATY */
+
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(180, 50, 45, 0.16) 0 5px,
+                    transparent 6px
+                ),
+
+
+                radial-gradient(
+                    circle at 80% 75%,
+                    rgba(180, 50, 45, 0.13) 0 5px,
+                    transparent 6px
+                ),
+
+
+                /* ŻÓŁTE ŚRODKI */
+
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(201, 162, 39, 0.20) 0 2px,
+                    transparent 3px
+                ),
+
+
+                /* ZIELONE LIŚCIE */
+
+                radial-gradient(
+                    ellipse at 25% 28%,
+                    rgba(63, 107, 84, 0.14) 0 9px,
+                    transparent 10px
+                ),
+
+
+                radial-gradient(
+                    ellipse at 75% 67%,
+                    rgba(63, 107, 84, 0.14) 0 9px,
+                    transparent 10px
+                ),
+
+
+                /* NIEBIESKIE ELEMENTY */
+
+                radial-gradient(
+                    circle at 65% 15%,
+                    rgba(36, 107, 178, 0.13) 0 4px,
+                    transparent 5px
+                ),
+
+
+                radial-gradient(
+                    circle at 35% 85%,
+                    rgba(36, 107, 178, 0.13) 0 4px,
+                    transparent 5px
+                );
+
+
+            background-size: 220px 220px;
+
+            background-attachment: fixed;
+        }
+
+
+
+        /* =========================================
+           GŁÓWNY NAGŁÓWEK
+        ========================================== */
+
+        header {
+
+            background-color: #172f4d;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 55px 20px 50px;
+
+            border-bottom: 5px solid #c9a227;
+        }
+
+
+        header h1 {
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 110px;
+
+            font-weight: 700;
+
+            letter-spacing: 14px;
+
+            margin-bottom: 5px;
+        }
+
+
+        header p {
+
+            font-size: 17px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: #e8dfc9;
+        }
+
+
+
+        /* =========================================
+           MENU
+        ========================================== */
+
+        nav {
+
+            background-color: #203f35;
+
+            padding: 19px;
+
+            text-align: center;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 10;
+
+            box-shadow:
+                0 3px 12px rgba(0,0,0,0.15);
+        }
+
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin: 0 20px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: #e1b52c;
+        }
+
+
+
+        /* =========================================
+           GŁÓWNE ZDJĘCIE WSI
+        ========================================== */
+
+        .hero {
+
+            height: 570px;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(10,25,35,0.20),
+                    rgba(10,25,35,0.45)
+                ),
+
+                url("kamien.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+        }
+
+
+
+        /* =========================================
+           GRANATOWE POLE "WITAJ W KAMIENIU"
+        ========================================== */
+
+        .hero-box {
+
+            position: relative;
+
+            background-color: #172f4d;
+
+            color: white;
+
+            padding: 45px 70px;
+
+            border-radius: 6px;
+
+            border-left: 6px solid #c9a227;
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.30);
+
+            overflow: hidden;
+        }
+
+
+        .hero-box h2 {
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 62px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+
+        .hero-box p {
+
+            font-size: 17px;
+
+            letter-spacing: 1px;
+
+            color: #eee6d3;
+        }
+
+
+
+        /* =========================================
+           SEKCJE
+        ========================================== */
+
+        section {
+
+            max-width: 1100px;
+
+            margin: 70px auto;
+
+            padding: 0 25px;
+        }
+
+
+        section h2 {
+
+            text-align: center;
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 48px;
+
+            font-weight: 600;
+
+            color: #172f4d;
+
+            margin-bottom: 35px;
+        }
+
+
+        section h2::after {
+
+            content: "";
+
+            display: block;
+
+            width: 70px;
+
+            height: 3px;
+
+            background-color: #c9a227;
+
+            margin: 15px auto;
+        }
+
+
+
+        /* =========================================
+           O WSI
+        ========================================== */
+
+        .about {
+
+            background-color: #fffdf8;
+
+            padding: 40px;
+
+            border-radius: 4px;
+
+            box-shadow:
+                0 5px 25px
+                rgba(38,53,45,0.10);
+
+            border-top: 4px solid #3f6b54;
+        }
+
+
+        .about p {
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            color: #4a514c;
+        }
+
+
+
+        /* =========================================
+           KAFELKI
+        ========================================== */
+
+        .cards {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 25px;
+        }
+
+
+        .card {
+
+            background-color: #fffdf8;
+
+            width: 310px;
+
+            padding: 32px;
+
+            border-radius: 4px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(38,53,45,0.10);
+
+            border-bottom: 4px solid #3f6b54;
+
+            transition: 0.3s;
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(38,53,45,0.16);
+        }
+
+
+        .card h3 {
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 30px;
+
+            font-weight: 600;
+
+            color: #172f4d;
+
+            margin-bottom: 15px;
+        }
+
+
+        .card p {
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            color: #555c57;
+        }
+
+
+
+        /* =========================================
+           KOŁO GOSPODYŃ WIEJSKICH
+        ========================================== */
+
+        .kgw {
+
+            border-bottom-color: #d63c32;
+        }
+
+
+        .kgw h3 {
+
+            color: #8f2e29;
+        }
+
+
+
+        /* =========================================
+           GALERIA
+        ========================================== */
+
+        .gallery-placeholder {
+
+            height: 280px;
+
+            background-color: #fffdf8;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #6c716b;
+
+            font-size: 17px;
+
+            border: 2px dashed #b9ae96;
+
+            box-shadow:
+                0 5px 20px
+                rgba(38,53,45,0.08);
+        }
+
+
+
+        /* =========================================
+           KONTAKT
+        ========================================== */
+
+        .contact-box {
+
+            text-align: center;
+        }
+
+
+
+        /* =========================================
+           STOPKA
+        ========================================== */
+
+        footer {
+
+            background-color: #172f4d;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            margin-top: 90px;
+
+            border-top: 5px solid #c9a227;
+        }
+
+
+        footer p {
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+
+            color: #ddd6c7;
+        }
+
+
+
+        /* =========================================
+           TELEFON
+        ========================================== */
+
+        @media (max-width: 700px) {
+
+
+            header {
+
+                padding: 40px 15px;
+            }
+
+
+            header h1 {
+
+                font-size: 65px;
+
+                letter-spacing: 7px;
+            }
+
+
+            header p {
+
+                font-size: 11px;
+
+                letter-spacing: 2px;
+            }
+
+
+            nav a {
+
+                display: inline-block;
+
+                margin: 7px 8px;
+
+                font-size: 12px;
+            }
+
+
+            .hero {
+
+                height: 450px;
+            }
+
+
+            .hero-box {
+
+                margin: 20px;
+
+                padding: 30px;
+            }
+
+
+            .hero-box h2 {
+
+                font-size: 45px;
+            }
+
+
+            section h2 {
+
+                font-size: 40px;
+            }
+
+
+            .card {
+
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- =========================================
+     NAGŁÓWEK
+========================================= -->
+
+<header>
+
+    <h1>
+        KAMIEŃ
+    </h1>
+
+
+    <p>
+        Nasza wieś • Nasza historia • Nasza społeczność
+    </p>
+
+</header>
+
+
+
+<!-- =========================================
+     MENU
+========================================= -->
+
+<nav>
+
+    <a href="#onas">
+        O wsi
+    </a>
+
+
+    <a href="#aktualnosci">
+        Aktualności
+    </a>
+
+
+    <a href="#wydarzenia">
+        Wydarzenia
+    </a>
+
+
+    <a href="#galeria">
+        Galeria
+    </a>
+
+
+    <a href="#kontakt">
+        Kontakt
+    </a>
+
+</nav>
+
+
+
+<!-- =========================================
+     ZDJĘCIE GŁÓWNE
+========================================= -->
+
+<div class="hero">
+
+    <div class="hero-box">
+
+        <h2>
+            Witaj w Kamieniu
+        </h2>
+
+
+        <p>
+            Poznaj miejsce, które nazywamy domem
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     O NASZEJ WSI
+========================================= -->
+
+<section id="onas">
+
+    <h2>
+        O naszej wsi
+    </h2>
+
+
+    <div class="about">
+
+        <p>
+
+            Kamień to wyjątkowa miejscowość,
+            którą tworzą przede wszystkim jej mieszkańcy.
+            To miejsce, w którym historia spotyka się
+            z codziennym życiem, a tradycja przekazywana
+            jest kolejnym pokoleniom.
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            Na stronie znajdziesz informacje o Kamieniu,
+            jego historii, mieszkańcach, wydarzeniach
+            oraz ciekawych miejscach.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     AKTUALNOŚCI
+========================================= -->
+
+<section id="aktualnosci">
+
+    <h2>
+        Aktualności
+    </h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>
+                Najświeższe informacje
+            </h3>
+
+
+            <p>
+
+                Tutaj będą pojawiały się
+                najnowsze informacje dotyczące
+                naszej miejscowości.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>
+                Ogłoszenia
+            </h3>
+
+
+            <p>
+
+                Ważne informacje i komunikaty
+                dla mieszkańców Kamienia.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>
+                Co nowego?
+            </h3>
+
+
+            <p>
+
+                Wszystko, co aktualnie dzieje się
+                w naszej wsi.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- KOŁO GOSPODYŃ WIEJSKICH -->
+
+        <div class="card kgw">
+
+            <h3>
+                🌾 Koło Gospodyń Wiejskich
+            </h3>
+
+
+            <p>
+
+                Informacje o działalności Koła
+                Gospodyń Wiejskich w Kamieniu,
+                organizowanych wydarzeniach,
+                spotkaniach i inicjatywach.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WYDARZENIA
+========================================= -->
+
+<section id="wydarzenia">
+
+    <h2>
+        Wydarzenia
+    </h2>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <h3>
+                Wydarzenia wiejskie
+            </h3>
+
+
+            <p>
+
+                Festyny, spotkania, uroczystości
+                i inne wydarzenia organizowane
+                w Kamieniu.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>
+                Najbliższe wydarzenia
+            </h3>
+
+
+            <p>
+
+                Tutaj będziemy umieszczać informacje
+                o terminach i miejscach wydarzeń.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     GALERIA
+========================================= -->
+
+<section id="galeria">
+
+    <h2>
+        Galeria
+    </h2>
+
+
+    <div class="gallery-placeholder">
+
+        📷 Tutaj pojawią się zdjęcia Kamienia
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     KONTAKT
+========================================= -->
+
+<section id="kontakt">
+
+    <h2>
+        Kontakt
+    </h2>
+
+
+    <div class="about contact-box">
+
+        <p>
+
+            Informacje kontaktowe zostaną tutaj dodane.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     STOPKA
+========================================= -->
+
+<footer>
+
+    <p>
+        © 2026 Kamień – nasza wieś
+    </p>
+
+
+    <br>
+
+
+    <p>
+        Strona mieszkańców Kamienia
+    </p>
+
+</footer>
+
+
+
+</body>
+
+</html>
